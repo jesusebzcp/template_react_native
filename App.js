@@ -1,20 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React, {useEffect} from 'react';
-import {Alert, Text} from 'react-native';
-import Config from 'react-native-config';
+import React from 'react';
+import Store from './src/core';
+import {MyStack} from './src/router';
 
 const App = () => {
-  useEffect(() => {
-    Alert.alert('Powered by:', Config.COPYRIGHT);
-  }, []);
-  return <Text>Hello word</Text>;
+  return (
+    <Store>
+      <MyStack />
+    </Store>
+  );
 };
 
 export default App;
